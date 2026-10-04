@@ -135,7 +135,7 @@ INSERT INTO FurnitureTypes (type_name) VALUES
 
 -- CATEGORIES
 INSERT INTO Categories (category_name) VALUES
-('Office'), ('Kitchen'), ('Bedroom'), ('Living Room');
+('Office'), ('Kitchen'), ('Bedroom'), ('Living Room')
 
 -- MATERIALS
 INSERT INTO Materials (material_name) VALUES

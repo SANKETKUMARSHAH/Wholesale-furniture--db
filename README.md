@@ -16,35 +16,33 @@ The Wholesale Furniture Sales Management System is built using MySQL. It models 
  Entity-Relationship (ER) Diagram
 The entity-relationship model depicts key business entities and their relationships:
 
-- **State** `(1)` ── Has ── `(N)` **Region**[cite: 11]
-- **Region** `(1)` ── Has ── `(N)` **City**[cite: 11]
-- **City** `(1)` ── Located_in ── `(N)` **Customer**[cite: 11]
-- **Customer** `(1)` ── Makes ── `(N)` **Sales**[cite: 11]
-- **FurnitureType** `(1)` ── Belongs_to ── `(N)` **Furniture**[cite: 11]
-- **Furniture** `(1)` ── Contains ── `(N)` **Sales**[cite: 11]
-- **Time** `(1)` ── Occurs_on ── `(N)` **Sales**[cite: 11]
+- State `(1)` ── Has ── `(N)` Region
+- Region `(1)` ── Has ── `(N)` City
+- City `(1)` ── Located_in ── `(N)` Customer
+- Customer `(1)` ── Makes ── `(N)` Sales
+- FurnitureType `(1)` ── Belongs_to ── `(N)` Furniture
+- Furniture `(1)` ── Contains ── `(N)` Sales
+- Time `(1)` ── Occurs_on ── `(N)` Sales
 
----
 
-## 🗄️ Database Schema & Relational Model
 
-### Tables Structure
-1. **States**: `state_id (PK)`, `state_name`[cite: 12, 13]
-2. **Regions**: `region_id (PK)`, `region_name`, `state_id (FK)`[cite: 12, 13]
-3. **Cities**: `city_id (PK)`, `city_name`, `region_id (FK)`[cite: 12, 13]
-4. **Customers**: `customer_id (PK)`, `customer_name`, `phone`, `address`, `city_id (FK)`[cite: 12, 13]
-5. **FurnitureTypes**: `type_id (PK)`, `type_name`[cite: 12, 13]
-6. **Categories**: `category_id (PK)`, `category_name`[cite: 12, 13]
-7. **Materials**: `material_id (PK)`, `material_name`[cite: 12, 13]
-8. **Furniture**: `furniture_id (PK)`, `furniture_name`, `type_id (FK)`, `category_id (FK)`, `material_id (FK)`[cite: 12, 13]
-9. **TimeDimension**: `date_id (PK)`, `full_date`, `day`, `month`, `quarter`, `year`[cite: 12, 13]
-10. **Sales**: `sale_id (PK)`, `customer_id (FK)`, `furniture_id (FK)`, `date_id (FK)`, `quantity`, `unit_price`, `discount_amount`[cite: 12, 13]
+ Database Schema & Relational Model
 
----
+ Tables Structure
+1. States: `state_id (PK)`, `state_name`
+2. Regions: `region_id (PK)`, `region_name`, `state_id (FK)`
+3. Cities: `city_id (PK)`, `city_name`, `region_id (FK)`
+4. Customers: `customer_id (PK)`, `customer_name`, `phone`, `address`, `city_id (FK)`
+5. FurnitureTypes: `type_id (PK)`, `type_name`
+6. Categories: `category_id (PK)`, `category_name`
+7. Materials: `material_id (PK)`, `material_name`
+8. Furniture: `furniture_id (PK)`, `furniture_name`, `type_id (FK)`, `category_id (FK)`, `material_id (FK)`
+9. TimeDimension: `date_id (PK)`, `full_date`, `day`, `month`, `quarter`, `year`
+10. Sales: `sale_id (PK)`, `customer_id (FK)`, `furniture_id (FK)`, `date_id (FK)`, `quantity`, `unit_price`, `discount_amount`
 
-## 🚀 Getting Started
+ Getting Started
 
-### Prerequisites
+ Prerequisites
 - MySQL Server (v8.0 or higher)
 - MySQL Workbench or any SQL client interface
 

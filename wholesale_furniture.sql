@@ -171,6 +171,11 @@ INSERT INTO Sales
 (2, 5, 4, 8, 2500.00, 500.00),
 (3, 1, 2, 4, 1500.00, 200.00),
 (1, 2, 3, 2, 12000.00, 1000.00);
+
+
+-- query 1
+
+
 SELECT * FROM States;
 SELECT * FROM Customers;
 SELECT * FROM Furniture;
@@ -185,6 +190,9 @@ FROM Furniture f
 JOIN FurnitureTypes ft ON f.type_id = ft.type_id
 JOIN Categories c ON f.category_id = c.category_id
 JOIN Materials m ON f.material_id = m.material_id;
+
+-- query 2
+
 SELECT
     SUM(quantity) AS total_quantity,
     SUM(quantity * unit_price) AS gross_sales,
@@ -192,6 +200,9 @@ SELECT
     SUM(quantity * unit_price - discount_amount)
         AS net_sales_income
 FROM Sales;
+
+-- query 3
+
 SELECT
     c.category_name,
     SUM(s.quantity) AS quantity_sold,
@@ -205,6 +216,8 @@ JOIN Categories c
     ON f.category_id = c.category_id
 GROUP BY c.category_id, c.category_name
 ORDER BY net_income DESC;
+
+-- query 4
 SELECT
     st.state_name,
     r.region_name,
@@ -223,6 +236,8 @@ GROUP BY
     r.region_id, r.region_name,
     ci.city_id, ci.city_name
 ORDER BY net_income DESC;
+
+-- query 5
 SELECT
     td.year,
     td.month,
@@ -234,6 +249,9 @@ FROM Sales s
 JOIN TimeDimension td ON s.date_id = td.date_id
 GROUP BY td.year, td.month
 ORDER BY td.year, td.month;
+
+-- query 6
+
 SELECT
     cu.customer_name,
     SUM(s.quantity * s.unit_price - s.discount_amount)
@@ -242,6 +260,10 @@ FROM Customers cu
 JOIN Sales s ON cu.customer_id = s.customer_id
 GROUP BY cu.customer_id, cu.customer_name
 HAVING SUM(s.quantity * s.unit_price - s.discount_amount) > 20000;
+
+-- query 7
+
+
 SELECT
     f.furniture_name
 FROM Furniture f
@@ -250,6 +272,10 @@ WHERE s.unit_price > (
     SELECT AVG(unit_price)
     FROM Sales
 );
+
+-- query 8
+
+
 SELECT DISTINCT f.furniture_name
 FROM Furniture f
 JOIN Sales s ON f.furniture_id = s.furniture_id;
@@ -263,6 +289,8 @@ VALUES ('New Wholesale Customer', '9000000004',
 UPDATE Customers
 SET address = 'Updated Market Road'
 WHERE customer_id = 1;
+
+-- query 9
 
 -- Retrieve customers
 SELECT * FROM Customers;
@@ -279,38 +307,41 @@ UNION
 SELECT customer_name AS name
 FROM Customers
 WHERE city_id = 2;
-CREATE VIEW SalesAnalysisView AS
-SELECT
-    s.sale_id,
-    td.full_date,
-    td.month,
-    td.year,
-    cu.customer_name,
-    ci.city_name,
-    r.region_name,
-    st.state_name,
-    f.furniture_name,
-    ft.type_name,
-    c.category_name,
-    m.material_name,
-    s.quantity,
-    s.unit_price,
-    s.quantity * s.unit_price AS gross_amount,
-    s.discount_amount,
-    s.quantity * s.unit_price - s.discount_amount
-        AS net_income
-FROM Sales s
-JOIN TimeDimension td ON s.date_id = td.date_id
-JOIN Customers cu ON s.customer_id = cu.customer_id
-JOIN Cities ci ON cu.city_id = ci.city_id
-JOIN Regions r ON ci.region_id = r.region_id
-JOIN States st ON r.state_id = st.state_id
-JOIN Furniture f ON s.furniture_id = f.furniture_id
-JOIN FurnitureTypes ft ON f.type_id = ft.type_id
-JOIN Categories c ON f.category_id = c.category_id
-JOIN Materials m ON f.material_id = m.material_id;
-    m.material_name
-FROM Furniture f
-JOIN FurnitureTypes ft ON f.type_id = ft.type_id
-JOIN Categories c ON f.category_id = c.category_id
-JOIN Materials m ON f.material_id = m.material_id;
+
+-- query 10
+
+-- CREATE VIEW SalesAnalysisView AS
+-- SELECT
+--     s.sale_id,
+--     td.full_date,
+--     td.month,
+--     td.year,
+--     cu.customer_name,
+--     ci.city_name,
+--     r.region_name,
+--     st.state_name,
+--     f.furniture_name,
+--     ft.type_name,
+--     c.category_name,
+--     m.material_name,
+--     s.quantity,
+--     s.unit_price,
+--     s.quantity * s.unit_price AS gross_amount,
+--     s.discount_amount,
+--     s.quantity * s.unit_price - s.discount_amount
+--         AS net_income
+-- FROM Sales s
+-- JOIN TimeDimension td ON s.date_id = td.date_id
+-- JOIN Customers cu ON s.customer_id = cu.customer_id
+-- JOIN Cities ci ON cu.city_id = ci.city_id
+-- JOIN Regions r ON ci.region_id = r.region_id
+-- JOIN States st ON r.state_id = st.state_id
+-- JOIN Furniture f ON s.furniture_id = f.furniture_id
+-- JOIN FurnitureTypes ft ON f.type_id = ft.type_id
+-- JOIN Categories c ON f.category_id = c.category_id
+-- JOIN Materials m ON f.material_id = m.material_id;
+--     m.material_name
+-- FROM Furniture f
+-- JOIN FurnitureTypes ft ON f.type_id = ft.type_id
+-- JOIN Categories c ON f.category_id = c.category_id
+-- JOIN Materials m ON f.material_id = m.material_id;

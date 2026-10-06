@@ -50,4 +50,13 @@ Installation & Setup
 1. Clone or download the project files to your local system.
 2. Open MySQL Workbench and connect to your database instance.
 3. Run the complete SQL script.
+
+## LeetCode Profiles
+
+| Member | LeetCode Profile |
+|--------|------------------|
+| Abhinav Kumar | [LeetCode Profile](https://leetcode.com/u/uZeCe8ThOp/) |
+| Member 2 | [LeetCode Profile](LEETCODE_LINK_2) |
+| Member 3 | [LeetCode Profile](LEETCODE_LINK_3) |
+| Member 4 | [LeetCode Profile](LEETCODE_LINK_4) |
    

@@ -56,7 +56,7 @@ Installation & Setup
 | Member | LeetCode Profile |
 |--------|------------------|
 | Abhinav Kumar | [LeetCode Profile](https://leetcode.com/u/uZeCe8ThOp/) |
-| Member 2 | [LeetCode Profile](LEETCODE_LINK_2) |
+| Hraday Singh| [LeetCode Profile](https://leetcode.com/u/hradaysinghh/) |
 | Member 3 | [LeetCode Profile](LEETCODE_LINK_3) |
 | Member 4 | [LeetCode Profile](LEETCODE_LINK_4) |
    

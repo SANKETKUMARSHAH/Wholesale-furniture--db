@@ -58,5 +58,5 @@ Installation & Setup
 | Abhinav Kumar | [LeetCode Profile](https://leetcode.com/u/uZeCe8ThOp/) |
 | Hraday Singh| [LeetCode Profile](https://leetcode.com/u/hradaysinghh/) |
 | Sanket Kumar Shah | [LeetCode Profile](https://leetcode.com/u/Sanket_kumar_shah/) |
-| Member 4 | [LeetCode Profile](LEETCODE_LINK_4) |
+| Anurag Tiwari | [LeetCode Profile](https://leetcode.com/u/A4RPS5BfO5/) |
    

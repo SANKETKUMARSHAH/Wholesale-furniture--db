@@ -57,6 +57,6 @@ Installation & Setup
 |--------|------------------|
 | Abhinav Kumar | [LeetCode Profile](https://leetcode.com/u/uZeCe8ThOp/) |
 | Hraday Singh| [LeetCode Profile](https://leetcode.com/u/hradaysinghh/) |
-| Member 3 | [LeetCode Profile](LEETCODE_LINK_3) |
+| Sanket Kumar Shah | [LeetCode Profile](https://leetcode.com/u/Sanket_kumar_shah/) |
 | Member 4 | [LeetCode Profile](LEETCODE_LINK_4) |
    

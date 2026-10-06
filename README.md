@@ -5,7 +5,7 @@ A comprehensive Database Management System (DBMS) designed to manage, analyze, a
 Project Overview
 The Wholesale Furniture Sales Management System is built using MySQL. It models complex analytical dimensions including geographical regions, furniture attributes, time dimensions, and transactional sales metrics.
 
- Key Features
+Key Features
 - Geographical Breakdown: Tracks performance across States, Regions, and Cities (e.g., Madhya Pradesh, Malwa, Indore).
 - Product Classification: Categorizes products by Furniture Type, Category, and Material (e.g., Wood, Marble, Metal).
 - Time Dimension Analytics: Analyzes sales trends on a daily, monthly, quarterly, and yearly basis.
@@ -13,7 +13,7 @@ The Wholesale Furniture Sales Management System is built using MySQL. It models 
 - Centralized View: Includes a pre-configured Database View (`SalesAnalysisView`) for reporting.
 
 
- Entity-Relationship (ER) Diagram
+Entity-Relationship (ER) Diagram
 The entity-relationship model depicts key business entities and their relationships:
 
 - State `(1)` ── Has ── `(N)` Region
@@ -26,9 +26,9 @@ The entity-relationship model depicts key business entities and their relationsh
 
 
 
- Database Schema & Relational Model
+Database Schema & Relational Model
 
- Tables Structure
+Tables Structure
 1. States: `state_id (PK)`, `state_name`
 2. Regions: `region_id (PK)`, `region_name`, `state_id (FK)`
 3. Cities: `city_id (PK)`, `city_name`, `region_id (FK)`
@@ -40,7 +40,7 @@ The entity-relationship model depicts key business entities and their relationsh
 9. TimeDimension: `date_id (PK)`, `full_date`, `day`, `month`, `quarter`, `year`
 10. Sales: `sale_id (PK)`, `customer_id (FK)`, `furniture_id (FK)`, `date_id (FK)`, `quantity`, `unit_price`, `discount_amount`
 
- Getting Started
+Getting Started
 
  Prerequisites
 - MySQL Server (v8.0 or higher)
@@ -49,5 +49,5 @@ The entity-relationship model depicts key business entities and their relationsh
 Installation & Setup
 1. Clone or download the project files to your local system.
 2. Open MySQL Workbench and connect to your database instance.
-3. Run the complete SQL script:
+3. Run the complete SQL script.
    

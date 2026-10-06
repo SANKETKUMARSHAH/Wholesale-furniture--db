@@ -1,8 +1,8 @@
- Wholesale Furniture Sales Management System 
+Wholesale Furniture Sales Management System 
 
 A comprehensive Database Management System (DBMS) designed to manage, analyze, and streamline sales operations, customer relationships, and inventory categorization for a wholesale furniture business.
 
- Project Overview
+Project Overview
 The Wholesale Furniture Sales Management System is built using MySQL. It models complex analytical dimensions including geographical regions, furniture attributes, time dimensions, and transactional sales metrics.
 
  Key Features
